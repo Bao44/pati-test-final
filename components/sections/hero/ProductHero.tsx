@@ -6,7 +6,7 @@ export default function ProductHero() {
     <section
       className="
         relative
-        bg-[var(--gradient-white-pink)]
+        bg-red-500
         py-12
         md:py-16
         lg:py-20

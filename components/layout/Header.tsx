@@ -4,27 +4,19 @@ import HeaderNav from "./HeaderNav";
 export default function Header() {
   return (
     <header className="relative bg-white">
-      <div
-        className="
-          mx-auto
-          max-w-[1280px]
-          px-4
-        "
-      >
-        <div
-          className="
-            grid
-            grid-cols-3
-            items-center
-            py-4
-          "
-        >
+      <div className="mx-auto max-w-350 px-4">
+        <div className="grid grid-cols-3 items-center py-2">
           {/* LEFT NAV */}
           <HeaderNav />
 
           {/* LOGO */}
-          <div className="text-center">
-            <span className="text-2xl font-medium tracking-widest">I·M·8</span>
+          <div className="mx-auto">
+            <img
+              src="https://im8health.com/cdn/shop/files/Header-Logo-New.svg?v=1729066833&width=190"
+              alt=""
+              width={95}
+              height={24}
+            />
           </div>
 
           {/* RIGHT ACTIONS */}
