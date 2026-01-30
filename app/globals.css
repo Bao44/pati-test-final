@@ -1,26 +1,156 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html,
+body {
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ---------------------------------------------------------
+   FONT DECLARATION
+   Fonts used in project:
+   - ABC Arizona Flare (Headings / Premium sections)
+   - Aeonik (Body / UI / Buttons)
+---------------------------------------------------------- */
+
+body {
+  font-family:
+    "Aeonik",
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    sans-serif;
+  background-color: var(--color-bg-base);
+  color: var(--color-text-primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ABC Arizona Flare", serif;
+  font-weight: 500;
+}
+
+/* ---------------------------------------------------------
+   COLOR SYSTEM
+   Naming convention:
+   --color-[purpose]-[variant]
+---------------------------------------------------------- */
+
+:root {
+  /* === BRAND / PRIMARY COLORS === */
+  --color-brand-primary: #a40011; /* Main brand red */
+  --color-brand-dark: #50000b; /* Deep wine red */
+  --color-brand-darker: #3a0008; /* Extra dark accent */
+
+  /* === GREEN (Health / Trust) === */
+  --color-green-deep: #0f7a3a;
+  --color-green-primary: #16a34a;
+  --color-green-bright: #22c55e;
+
+  /* === NEUTRAL / BACKGROUND === */
+  --color-bg-base: #ffffff;
+  --color-bg-soft: #f5eaea; /* Soft pink background */
+  --color-bg-muted: #2d3b32; /* Dark muted background */
+
+  /* === GOLD / PREMIUM ACCENTS === */
+  --color-gold-soft: #bf9c74;
+  --color-gold-primary: #f59e0b;
+
+  /* === TEXT COLORS === */
+  --color-text-primary: #2d3b32;
+  --color-text-secondary: #5c5c5c;
+  --color-text-inverse: #ffffff;
+
+  /* === BORDER / DIVIDER === */
+  --color-border-light: rgba(0, 0, 0, 0.08);
+}
+
+/* ---------------------------------------------------------
+   GRADIENT SYSTEM
+   Used heavily in hero, cards, badges, CTA blocks
+---------------------------------------------------------- */
+
+:root {
+  /* === GREEN SOFT BACKGROUNDS === */
+  --gradient-green-soft-1: linear-gradient(
+    135deg,
+    rgb(240, 249, 244) 0%,
+    rgb(232, 245, 236) 100%
+  );
+
+  --gradient-green-soft-2: linear-gradient(
+    135deg,
+    rgb(240, 253, 244) 0%,
+    rgb(199, 242, 214) 100%
+  );
+
+  /* === PINK / WARM BACKGROUNDS === */
+  --gradient-pink-soft: linear-gradient(
+    120deg,
+    rgba(245, 234, 234, 0.8) 0%,
+    rgba(255, 242, 237, 0.6) 100%
+  );
+
+  --gradient-white-pink: linear-gradient(
+    145deg,
+    rgba(255, 255, 255, 0.98) 0%,
+    rgba(245, 234, 234, 0.95) 50%,
+    rgba(255, 245, 245, 0.92) 100%
+  );
+
+  /* === GOLD / PREMIUM === */
+  --gradient-gold-horizontal: linear-gradient(
+    90deg,
+    rgb(238, 184, 122) 0%,
+    rgb(223, 206, 137) 100%
+  );
+
+  --gradient-gold-warm: linear-gradient(
+    105deg,
+    rgb(254, 249, 231) 0%,
+    rgb(254, 243, 199) 40%,
+    rgb(253, 230, 138) 100%
+  );
+
+  --gradient-gold-soft: linear-gradient(
+    171deg,
+    rgb(255, 239, 214) 6.83%,
+    rgba(255, 238, 219, 0.5) 135.82%
+  );
+
+  /* === BRAND / CTA === */
+  --gradient-brand-primary: linear-gradient(
+    145deg,
+    rgb(164, 0, 17) 0%,
+    rgb(80, 0, 11) 60%,
+    rgb(58, 0, 8) 100%
+  );
+}
+
+/* ---------------------------------------------------------
+   GLOBAL ELEMENT DEFAULTS
+---------------------------------------------------------- */
+
+button {
+  cursor: pointer;
 }
