@@ -35,7 +35,7 @@ export default function SupplyDropdown() {
   }, []);
 
   return (
-    <div ref={ref} className="relative w-full max-w-md">
+    <div ref={ref} className="relative w-full">
       {/* BUTTON */}
       <button
         type="button"
@@ -43,16 +43,16 @@ export default function SupplyDropdown() {
         className="flex w-full items-center justify-between rounded-2xl border border-(--color-brand-dark) px-5 py-1 text-left transition"
       >
         <div>
-          <div className="text-md font-bold text-(--color-brand-dark)">
+          <div className="text-[15px] max-sm:text-xs max-sm:font-black font-bold text-(--color-brand-dark)">
             {selected.label}
           </div>
-          <div className="text-sm font-semibold text-(--color-brand-darker)">
+          <div className="text-[13px] max-sm:text-xs font-semibold text-(--color-brand-darker)">
             {selected.sub}
           </div>
         </div>
 
         <span
-          className={clsx("ml-4 transition-transform", open && "rotate-180")}
+          className={clsx("ml-4 max-sm:ml-0 transition-transform", open && "rotate-180")}
         >
           <ChevronDown color="var(--color-brand-dark)" />
         </span>
