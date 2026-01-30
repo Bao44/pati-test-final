@@ -3,6 +3,7 @@ import ChatBot from "../components/chatbot/ChatBot";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import StickyProductBar from "@/components/layout/StickyProductBar";
+import StickyProductBarHeader from "@/components/layout/StickyProductBarHeader";
 
 export default function Home() {
   return (
@@ -12,8 +13,8 @@ export default function Home() {
       <AnnouncementBar />
       <Header />
       <StickyProductBar />
+      <StickyProductBarHeader />
       {/* Product Hero Section */}
-      <ProductHero />
       <ProductHero />
     </div>
   );

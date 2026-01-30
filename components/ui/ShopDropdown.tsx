@@ -33,19 +33,15 @@ export default function ShopDropdown() {
           "absolute -left-14 top-full",
           "w-screen max-w-108.25 max-xl:translate-x-10 -translate-x-1/2 z-50",
           "transition-all duration-300 ease-in-out",
-
-          // 3. Logic ẩn hiện Dropdown
           open
             ? "opacity-100 visible translate-y-0"
             : "opacity-0 invisible -translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0",
-
-          // Cầu nối giữ hover
           "before:absolute before:-top-4 before:left-0 before:h-4 before:w-full before:content-['']",
         )}
       >
         <div className="relative bg-white">
           {/* SCROLL AREA */}
-          <div className="max-h-[90vh] overflow-y-auto px-6 pb-6 pt-10">
+          <div className="max-h-[90vh] overflow-y-auto px-6 pb-6 pt-10 no-scrollbar">
             <div className="grid grid-cols-1 gap-4">
               <Im8GoldStandard />
               {IMAGE_BANNERS.map((src, index) => (

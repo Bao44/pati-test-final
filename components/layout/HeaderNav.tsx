@@ -11,7 +11,7 @@ export default function HeaderNav() {
   return (
     <div>
       {/* DESKTOP NAV */}
-      <nav className="hidden lg:flex items-center gap-10 max-xl:gap-4 text-[17px] text-[#50000b] max-xl:text-sm font-semibold max-xl:font-black text-brand-dark-red whitespace-nowrap">
+      <nav className="hidden lg:flex items-center gap-10 max-xl:gap-4 text-[17px] text-[#50000b] max-xl:text-sm font-semibold max-xl:font-black whitespace-nowrap">
         <ShopDropdown />
         <span className="cursor-pointer hover:underline">Science</span>
         <span className="cursor-pointer hover:underline">
@@ -30,12 +30,12 @@ export default function HeaderNav() {
         >
           {/* Đổi icon dựa trên trạng thái mở/đóng */}
           {isMobileMenuOpen ? (
-            <X size={34} strokeWidth={1.5} className="text-brand-red" />
+            <X size={34} strokeWidth={1.5} className="text-[#a40011]" />
           ) : (
             <TextAlignJustify
               size={34}
               strokeWidth={1.5}
-              className="text-brand-red"
+              className="text-[#a40011]"
             />
           )}
         </button>

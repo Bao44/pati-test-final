@@ -2,7 +2,6 @@
 
 import { useEffect } from "react";
 import clsx from "clsx";
-import { ChevronDown } from "lucide-react";
 import Im8GoldStandard from "../ui/Im8GoldStandard";
 import { IMAGE_BANNERS } from "@/lib/data";
 import CurrencyDropdown from "../ui/CurrencyDropdown";
@@ -32,8 +31,8 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
     }
   }, [isOpen]);
 
-  const HEADER_OFFSET = "top-[96px]";
-  const MENU_HEIGHT = "h-[calc(100vh-96px)]";
+  const HEADER_OFFSET = "top-[112px]";
+  const MENU_HEIGHT = "h-[calc(100vh-112px)]";
 
   return (
     <>

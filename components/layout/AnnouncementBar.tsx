@@ -11,7 +11,7 @@ export default function AnnouncementBar() {
             35% OFF - FEEL LIKE YOURSELF AGAIN
           </span>
         </div>
-        <div className="hidden md:block">
+        <div className="hidden lg:block">
           <CurrencyDropdown />
         </div>
       </div>
