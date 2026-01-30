@@ -3,7 +3,7 @@ import HeaderNav from "./HeaderNav";
 
 export default function Header() {
   return (
-    <header className="relative z-40 bg-white">
+    <header className="relative bg-white">
       <div
         className="
           mx-auto

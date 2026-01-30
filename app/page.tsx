@@ -12,6 +12,7 @@ export default function Home() {
       <Header />
       <StickyProductBar />
       <ProductHero />
+      <ProductHero />
     </div>
   );
 }
