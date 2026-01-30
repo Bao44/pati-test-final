@@ -8,9 +8,11 @@ export default function Home() {
   return (
     <div>
       <ChatBot />
+      {/* Header */}
       <AnnouncementBar />
       <Header />
       <StickyProductBar />
+      {/* Product Hero Section */}
       <ProductHero />
       <ProductHero />
     </div>

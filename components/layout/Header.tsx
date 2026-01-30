@@ -5,7 +5,7 @@ export default function Header() {
   return (
     <header className="relative bg-white">
       <div className="mx-auto max-w-350 px-4">
-        <div className="grid grid-cols-3 items-center py-2">
+        <div className="grid grid-cols-3 items-center py-4">
           {/* LEFT NAV */}
           <HeaderNav />
 
