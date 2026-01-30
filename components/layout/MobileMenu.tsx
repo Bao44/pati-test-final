@@ -5,6 +5,7 @@ import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import Im8GoldStandard from "../ui/Im8GoldStandard";
 import { IMAGE_BANNERS } from "@/lib/data";
+import CurrencyDropdown from "../ui/CurrencyDropdown";
 
 const TEXT_LINKS = [
   "Welcome from David",
@@ -85,9 +86,9 @@ export default function MobileMenu({ isOpen, onClose }: MobileMenuProps) {
               ))}
             </div>
 
-            {/* Currency Selector (Footer) */}
+            {/* Currency Selector */}
             <div className="py-1 flex items-center gap-1 text-[#50000b] font-semibold text-[14px] cursor-pointer hover:underline">
-              USD <ChevronDown size={10} strokeWidth={3} />
+              <CurrencyDropdown direction="up" />
             </div>
           </div>
         </div>

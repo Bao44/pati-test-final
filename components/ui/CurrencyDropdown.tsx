@@ -19,7 +19,15 @@ const CURRENCIES = [
   { country: "South Africa", code: "ZAR", symbol: "R" },
 ];
 
-export default function CurrencyDropdown() {
+interface CurrencyDropdownProps {
+  direction?: "up" | "down";
+  className?: string;
+}
+
+export default function CurrencyDropdown({
+  direction = "down",
+  className,
+}: CurrencyDropdownProps) {
   const [open, setOpen] = useState(false);
   const [search, setSearch] = useState("");
   const [selected, setSelected] = useState("USD");
@@ -40,8 +48,8 @@ export default function CurrencyDropdown() {
   );
 
   return (
-    <div ref={ref} className="relative max-lg:hidden">
-      {/* BUTTON */}
+    <div ref={ref} className={clsx("relative inline-block", className)}>
+      {/* TRIGGER BUTTON */}
       <button
         onClick={() => setOpen((v) => !v)}
         className="flex items-center gap-1 font-semibold hover:underline"
@@ -50,26 +58,36 @@ export default function CurrencyDropdown() {
         <ChevronDown
           size={14}
           strokeWidth={3}
-          className={clsx("transition", open && "rotate-180")}
+          className={clsx(
+            "transition-transform duration-200",
+            open && "rotate-180",
+          )}
         />
       </button>
 
-      {/* DROPDOWN */}
+      {/* DROPDOWN CONTENT */}
       {open && (
-        <div className="absolute right-0 top-full mt-3 w-64 bg-white text-(--color-brand-dark) shadow-xl z-10">
-          {/* SEARCH */}
-          <div className="p-3">
+        <div
+          className={clsx(
+            "absolute right-0 w-64 bg-white text-(--color-brand-dark) shadow-xl z-50 border border-gray-200",
+            direction === "up" ? "bottom-full mb-2 left-0" : "top-full mt-3",
+          )}
+          
+        >
+          {/* SEARCH INPUT */}
+          <div className="p-3 border-b border-gray-100">
             <div className="relative">
               <input
                 placeholder="SEARCH"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-                className="w-full border border-(--color-brand-dark) px-3 py-2 pr-9 text-sm outline-none"
+                className="w-full border border-gray-200 px-3 py-2 pr-9 text-sm outline-none placeholder:text-gray-400 font-medium"
+                autoFocus
               />
               {search && (
                 <button
                   onClick={() => setSearch("")}
-                  className="absolute right-2 top-1/2 -translate-y-1/2 text-(--color-brand-dark) hover:opacity-70"
+                  className="absolute right-2 top-1/2 -translate-y-1/2 text-gray-400 hover:opacity-70"
                 >
                   <X size={16} strokeWidth={2.5} />
                 </button>
@@ -77,8 +95,8 @@ export default function CurrencyDropdown() {
             </div>
           </div>
 
-          {/* LIST */}
-          <div className="max-h-64 overflow-y-auto">
+          {/* CURRENCY LIST */}
+          <div className="max-h-64 overflow-y-auto custom-scrollbar">
             {filtered.map((item) => (
               <button
                 key={item.country}
@@ -86,10 +104,10 @@ export default function CurrencyDropdown() {
                   setSelected(item.code);
                   setOpen(false);
                 }}
-                className="group flex w-full items-center justify-between px-4 py-3 text-sm font-semibold hover:bg-red-50"
+                className="group flex w-full items-center justify-between px-4 py-3 text-sm font-semibold hover:bg-[#fdfaf8] hover:text-[#a40011] transition-colors border-b border-gray-50 last:border-none"
               >
                 <span className="uppercase">{item.country}</span>
-                <span className="opacity-0 group-hover:opacity-100 transition-opacity">
+                <span className="opacity-0 group-hover:opacity-100 transition-opacity text-xs font-bold">
                   {item.code} {item.symbol}
                 </span>
               </button>
