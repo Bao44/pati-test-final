@@ -7,13 +7,15 @@ import { ChevronDown } from "lucide-react";
 const OPTIONS = [
   {
     id: "90",
+    title: "90-Day Supply",
     label: "90-Day Supply (Save 30%)",
     sub: "$2.61 USD / serving",
   },
   {
     id: "30",
-    label: "30-Day Supply",
-    sub: "$3.25 USD / serving",
+    title: "30-Day Supply",
+    label: "30-Day Supply (Save 20%)",
+    sub: "$2.97 USD / serving",
   },
 ];
 
@@ -38,45 +40,27 @@ export default function SupplyDropdown() {
       <button
         type="button"
         onClick={() => setOpen((v) => !v)}
-        className="
-          flex w-full items-center justify-between
-          rounded-3xl
-          border border-(--color-brand-dark)
-          px-5 py-1
-          text-left
-          transition
-        "
+        className="flex w-full items-center justify-between rounded-2xl border border-(--color-brand-dark) px-5 py-1 text-left transition"
       >
         <div>
-          <div className="text-sm font-medium text-(--color-brand-primary)">
+          <div className="text-md font-bold text-(--color-brand-dark)">
             {selected.label}
           </div>
-          <div className="text-xs text-gray-600">{selected.sub}</div>
+          <div className="text-sm font-semibold text-(--color-brand-darker)">
+            {selected.sub}
+          </div>
         </div>
 
         <span
           className={clsx("ml-4 transition-transform", open && "rotate-180")}
         >
-          <ChevronDown />
+          <ChevronDown color="var(--color-brand-dark)" />
         </span>
       </button>
 
       {/* DROPDOWN */}
       {open && (
-        <div
-          className="
-      absolute
-      left-0 right-0
-      bottom-full
-      mb-2
-      z-20
-      overflow-hidden
-      rounded-2xl
-      border border-(--color-brand-primary)
-      bg-white
-      shadow-lg
-    "
-        >
+        <div className="absolute left-0 right-0 bottom-full mb-2 z-20 overflow-hidden rounded-2xl border border-(--color-brand-dark) bg-white shadow-lg">
           {OPTIONS.map((opt, index) => (
             <button
               key={opt.id}
@@ -84,18 +68,12 @@ export default function SupplyDropdown() {
                 setSelected(opt);
                 setOpen(false);
               }}
-              className={`
-      flex w-full flex-col
-      px-5 py-4
-      text-left
-      hover:bg-[#fff7f5]
-      ${index !== 0 ? "border-t border-[var(--color-border-light)]" : ""}
-    `}
+              className={`flex w-full flex-col px-5 py-3 text-left hover:bg-[#fff7f5]
+      ${index !== 0 ? "border-t border-(--color-border-light)" : ""}`}
             >
-              <span className="text-sm font-medium text-[var(--color-brand-primary)]">
-                {opt.label}
+              <span className="text-[17px] font-semibold text-(--color-brand-dark)">
+                {opt.title}
               </span>
-              <span className="text-xs text-gray-600">{opt.sub}</span>
             </button>
           ))}
         </div>
