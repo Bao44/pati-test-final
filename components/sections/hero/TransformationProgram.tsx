@@ -32,7 +32,10 @@ export default function TransformationProgram() {
           {/* EXPERTS GRID */}
           <div className="grid grid-cols-3 gap-4 mb-10 max-lg:mb-3">
             {IMAGE_TRANSFORMATION.map((expert, idx) => (
-              <div key={idx} className="flex flex-col items-center gap-2">
+              <div
+                key={idx}
+                className="flex flex-col items-center gap-2 transform transition-all duration-300 ease-out hover:-translate-y-1 cursor-pointer"
+              >
                 {/* Image Frame */}
                 <div className="w-full aspect-square rounded-lg overflow-hidden border-2 border-[#bf9c74] shadow-sm">
                   <img

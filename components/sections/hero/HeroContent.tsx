@@ -2,6 +2,7 @@ import { Star } from "lucide-react";
 import ResultsCard from "./ResultsCard";
 import PurchaseBox from "./PurchaseBox";
 import TransformationProgram from "./TransformationProgram";
+import ProductDetailsSection from "./ProductDetailsSection";
 
 export default function HeroContent() {
   return (
@@ -53,6 +54,8 @@ export default function HeroContent() {
 
       {/* How to use Section */}
       <TransformationProgram />
+
+      <ProductDetailsSection />
 
       <ResultsCard />
     </div>

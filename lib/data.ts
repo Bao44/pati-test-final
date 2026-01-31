@@ -62,3 +62,36 @@ export const IMAGE_TRANSFORMATION = [
       "https://im8health.com/cdn/shop/files/Rectangle_6.png?v=1764066459&width=300",
   },
 ];
+
+export const VIDEOS_HERO = [
+  {
+    id: 1,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/thm-expert_robinB2.jpg?v=1731999065",
+  },
+  {
+    id: 2,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/influe-carou_bobbyRich2.jpg?v=1731863977",
+  },
+  {
+    id: 3,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/thm-expert_amyShah2.jpg?v=1731864964",
+  },
+  {
+    id: 4,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/thm-influ_dustinPoirier.jpg?v=1731833492",
+  },
+  {
+    id: 5,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/image_54.png?v=1731863088",
+  },
+  {
+    id: 6,
+    thumbnail:
+      "https://im8health.com/cdn/shop/files/preview_images/1f4b2af008104c92a29f9d78814f1aa0.thumbnail.0000000000.jpg?v=1731860287",
+  },
+];
