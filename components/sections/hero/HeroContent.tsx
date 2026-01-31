@@ -1,6 +1,7 @@
 import { Star } from "lucide-react";
 import ResultsCard from "./ResultsCard";
 import PurchaseBox from "./PurchaseBox";
+import TransformationProgram from "./TransformationProgram";
 
 export default function HeroContent() {
   return (
@@ -24,7 +25,8 @@ export default function HeroContent() {
         </div>
 
         <span className="text-[#6b4c3a] font-semibold">
-          <span className="max-sm:hidden">|</span> 620k+ customer purchases | 19M+ servings
+          <span className="max-sm:hidden">|</span> 620k+ customer purchases |
+          19M+ servings
         </span>
       </div>
 
@@ -48,8 +50,10 @@ export default function HeroContent() {
 
       {/* Purchase Button */}
       <PurchaseBox />
-{/* Results Card */}
-      <ResultsCard />{/* Results Card */}
+
+      {/* How to use Section */}
+      <TransformationProgram />
+
       <ResultsCard />
     </div>
   );

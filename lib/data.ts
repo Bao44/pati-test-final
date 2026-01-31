@@ -23,3 +23,42 @@ export const IMAGE_HERO = [
   "https://im8health.com/cdn/shop/files/pdp_essentials-jar_carousel06.jpg?v=1761040602&width=823",
   "https://im8health.com/cdn/shop/files/pdp_essentials-jar_carousel07.jpg?v=1761040602&width=823",
 ];
+
+export const IMAGE_TRANSFORMATION = [
+  {
+    name: "Dr. Dawn Mussallem",
+    role: "Cancer Survivor & Physician at Mayo Clinic",
+    image:
+      "https://im8health.com/cdn/shop/files/sab_Dawn_grid.jpg?v=1747304298&width=300",
+  },
+  {
+    name: "Bobby Rich",
+    role: "Trainer to David Beckham and World-class Athletes",
+    image:
+      "https://im8health.com/cdn/shop/files/Rectangle_3_68b5f4fc-fe48-466d-9d97-487fbdea1942.png?v=1764066245&width=300",
+  },
+  {
+    name: "Dr. Suzanne Devkota",
+    role: "Gut Health Expert & Prof at Cedars Sinai",
+    image:
+      "https://im8health.com/cdn/shop/files/Rectangle_4_9e90556f-68ae-405e-a707-89eff3d64066.png?v=1764066309&width=300",
+  },
+  {
+    name: "Tavi Castro",
+    role: "Breathwork Expert & Free-Diving World Record Holder",
+    image:
+      "https://im8health.com/cdn/shop/files/Rectangle_5.png?v=1764066392&width=300",
+  },
+  {
+    name: "Dr. Amy Shah",
+    role: 'Double-Board Certified Physician and Host of "Save Yourself" Podcast',
+    image:
+      "https://im8health.com/cdn/shop/files/Rectangle_7.png?v=1764066430&width=300",
+  },
+  {
+    name: "Dr. Ara Suppiah",
+    role: "Performance & Longevity Physician at LIV Golf",
+    image:
+      "https://im8health.com/cdn/shop/files/Rectangle_6.png?v=1764066459&width=300",
+  },
+];
