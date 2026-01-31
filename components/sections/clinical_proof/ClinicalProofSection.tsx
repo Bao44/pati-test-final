@@ -1,6 +1,29 @@
+"use client";
+
+import { useEffect, useState } from "react";
 import { Stat } from "./_components/Stat";
 
 export default function ClinicalProofSection() {
+  const [stats, setStats] = useState<number[]>([0, 0, 0, 0]);
+
+  useEffect(() => {
+    const intervals = stats.map((_, index) => {
+      const delay = Math.floor(Math.random() * 900) + 700;
+
+      return setInterval(() => {
+        setStats((prev) => {
+          const newStats = [...prev];
+          newStats[index] = Math.floor(Math.random() * 101);
+          return newStats;
+        });
+      }, delay);
+    });
+
+    return () => {
+      intervals.forEach(clearInterval);
+    };
+  }, []);
+
   return (
     <section className="relative py-12 lg:py-8 px-2 max-sm:px-0 overflow-visible text-white">
       {/* BACKGROUND IMAGE */}
@@ -22,19 +45,19 @@ export default function ClinicalProofSection() {
           {/* Mobile: gap-8, Desktop: gap-12 */}
           <div className="grid grid-cols-2 gap-8 lg:gap-12">
             <Stat
-              value="95%"
+              value={`${stats[0]}%`}
               desc="Participants felt a noticeable boost in daily energy levels."
             />
             <Stat
-              value="85%"
+              value={`${stats[1]}%`}
               desc="Felt less bloated and had improved digestion."
             />
             <Stat
-              value="80%"
+              value={`${stats[2]}%`}
               desc="Participants reported getting better sleep."
             />
             <Stat
-              value="70%"
+              value={`${stats[3]}%`}
               desc="Participants noticed sharper focus and improved mental clarity."
             />
           </div>
@@ -143,7 +166,7 @@ export default function ClinicalProofSection() {
                 px-6 py-3
                 text-xs sm:text-sm font-bold
                 text-white
-                hover:bg-[#3f0008]
+                hover:bg-[#a40011] duration-500
                 uppercase tracking-wide
               "
             >
@@ -157,7 +180,7 @@ export default function ClinicalProofSection() {
                 px-6 py-3
                 text-xs sm:text-sm font-bold
                 text-[#50000b]
-                hover:bg-[#ff9b90]
+                hover:bg-[#f78174] duration-500
                 uppercase tracking-wide
               "
             >
