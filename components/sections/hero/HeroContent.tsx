@@ -56,8 +56,6 @@ export default function HeroContent() {
       <TransformationProgram />
 
       <ProductDetailsSection />
-
-      <ResultsCard />
     </div>
   );
 }
