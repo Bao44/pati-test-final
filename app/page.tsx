@@ -4,6 +4,7 @@ import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import Header from "@/components/layout/Header";
 import StickyProductBar from "@/components/layout/StickyProductBar";
 import StickyProductBarHeader from "@/components/layout/StickyProductBarHeader";
+import ClinicalProofSection from "@/components/sections/clinical_proof/ClinicalProofSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,9 @@ export default function Home() {
       <StickyProductBarHeader />
       {/* Product Hero Section */}
       <ProductHero />
+
+      {/* Clinical Proof Section */}
+      <ClinicalProofSection />
     </div>
   );
 }

@@ -111,7 +111,7 @@ export default function ProductDetailsSection() {
 
 function AmbassadorSlider() {
   return (
-    <section>
+    <section className="pb-23 max-xl:pb-13">
       <p className="mb-5 font-semibold text-[#50000b] text-[20px] max-lg:text-[18px]">
         What our IM8 Ambassadors are saying
       </p>
