@@ -22,7 +22,7 @@ function ChatBot() {
   return (
     <div>
       {/* Location button */}
-      <div className="fixed bottom-10 right-10 z-50 max-sm:bottom-20 max-sm:right-5 max-lg:bottom-25">
+      <div className="fixed bottom-10 right-10 z-30 max-sm:bottom-20 max-sm:right-5 max-lg:bottom-25">
         <button
           ref={chatIconRef}
           onClick={toggleChat}

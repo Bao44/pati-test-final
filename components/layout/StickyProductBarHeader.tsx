@@ -31,7 +31,6 @@ export default function StickyProductBarHeader() {
       <div
         className={clsx(
           "mx-auto w-full flex items-center justify-between",
-          // Padding Responsive:
           "px-4 py-3", // Mobile
           "sm:px-6 sm:py-3", // Tablet
           "xl:px-63.25 xl:pt-5.75 xl:pb-6",
@@ -43,7 +42,7 @@ export default function StickyProductBarHeader() {
           alt=""
           width={135}
           height={35}
-          className="hidden lg:block"
+          className="hidden lg:block cursor-pointer"
         />
 
         {/* Text Content */}

@@ -10,14 +10,14 @@ export default function Gallery() {
   const [selectedIndex, setSelectedIndex] = useState(0);
 
   const scrollRef = useRef<HTMLDivElement>(null);
+  const mobileSliderRef = useRef<HTMLDivElement>(null);
+  const modalImageRef = useRef<HTMLImageElement>(null);
 
   const [canScrollUp, setCanScrollUp] = useState(false);
   const [canScrollDown, setCanScrollDown] = useState(true);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [mounted, setMounted] = useState(false);
-
-  const modalImageRef = useRef<HTMLImageElement>(null);
   const [buttonPos, setButtonPos] = useState({ top: 20, right: 20 });
 
   const scrollThumbnails = (direction: "up" | "down") => {
@@ -46,6 +46,29 @@ export default function Gallery() {
     }
     return () => el?.removeEventListener("scroll", checkScroll);
   }, []);
+
+  // Hàm này xử lý khi người dùng click vào dấu chấm -> Cuộn slider đến ảnh đó
+  const handleDotClick = (index: number) => {
+    setSelectedIndex(index);
+    if (mobileSliderRef.current) {
+      mobileSliderRef.current.scrollTo({
+        left: index * mobileSliderRef.current.offsetWidth,
+        behavior: "smooth",
+      });
+    }
+  };
+
+  // Hàm này lắng nghe sự kiện cuộn của Slider để cập nhật dấu chấm active
+  const handleMobileScroll = () => {
+    if (mobileSliderRef.current) {
+      const scrollLeft = mobileSliderRef.current.scrollLeft;
+      const width = mobileSliderRef.current.offsetWidth;
+      const newIndex = Math.round(scrollLeft / width);
+      if (newIndex !== selectedIndex) {
+        setSelectedIndex(newIndex);
+      }
+    }
+  };
 
   useEffect(() => {
     setMounted(true); // Đánh dấu đã render xong phía client
@@ -79,7 +102,6 @@ export default function Gallery() {
   useLayoutEffect(() => {
     if (isModalOpen) {
       setTimeout(updateButtonPosition, 0);
-
       window.addEventListener("resize", updateButtonPosition);
       return () => window.removeEventListener("resize", updateButtonPosition);
     }
@@ -105,7 +127,7 @@ export default function Gallery() {
           {/* Scrollable Area */}
           <div
             ref={scrollRef}
-            className="flex md:flex-col xl:gap-5 gap-2 overflow-x-auto md:overflow-y-auto md:overflow-x-hidden no-scrollbar max-w-[calc(100vw-40px)] md:max-w-none max-h-100 xl:max-h-160 py-1 px-1 scroll-smooth"
+            className="hidden md:flex md:flex-col xl:gap-5 gap-2 overflow-x-auto md:overflow-y-auto md:overflow-x-hidden no-scrollbar max-w-[calc(100vw-40px)] md:max-w-none max-h-100 xl:max-h-160 py-1 px-1 scroll-smooth"
           >
             {IMAGE_HERO.map((img, idx) => (
               <button
@@ -139,18 +161,68 @@ export default function Gallery() {
           >
             <ChevronDown size={16} />
           </button>
+
+          {/* MOBILE: Pagination Dots */}
+          <div className="flex md:hidden gap-1 justify-center items-center w-full py-1 px-12 overflow-x-auto no-scrollbar touch-pan-x">
+            {IMAGE_HERO.map((_, idx) => (
+              <button
+                key={idx}
+                onClick={() => handleDotClick(idx)}
+                className="w-6 h-6 flex items-center justify-center cursor-pointer"
+              >
+                <div
+                  className={clsx(
+                    "rounded-full transition-all duration-300 flex items-center justify-center",
+                    selectedIndex === idx
+                      ? "w-4 h-4 border border-[#50000b] bg-transparent" // Active
+                      : "w-2.5 h-2.5 bg-[#fca5a5]", // Inactive
+                  )}
+                >
+                  {selectedIndex === idx && (
+                    <div className="w-2 h-2 bg-[#50000b] rounded-full" />
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
         </div>
 
         {/* MAIN IMAGE DISPLAY */}
-        <div
-          onClick={() => setIsModalOpen(true)}
-          className="rounded-2xl flex items-center justify-center h-full"
-        >
-          <img
-            src={IMAGE_HERO[selectedIndex]}
-            alt="Product Main"
-            className="w-full h-full object-contain rounded-2xl cursor-pointer"
-          />
+        <div className="flex-1 relative">
+          {/* DESKTOP VIEW */}
+          <div
+            onClick={() => setIsModalOpen(true)}
+            className="hidden md:flex rounded-2xl items-center justify-center bg-transparent"
+          >
+            <img
+              src={IMAGE_HERO[selectedIndex]}
+              alt="Product Main"
+              className="w-full h-full object-contain rounded-2xl cursor-pointer duration-300"
+              style={{ maxHeight: "600px" }}
+            />
+          </div>
+
+          {/* MOBILE VIEW */}
+          <div
+            ref={mobileSliderRef}
+            onScroll={handleMobileScroll}
+            className="md:hidden flex w-full overflow-x-auto snap-x snap-mandatory no-scrollbar scroll-smooth items-center"
+          >
+            {IMAGE_HERO.map((img, idx) => (
+              <div
+                key={idx}
+                className="w-full shrink-0 snap-center flex items-center justify-center h-full"
+                onClick={() => setIsModalOpen(true)}
+              >
+                <img
+                  src={img}
+                  alt={`Slide ${idx}`}
+                  className="w-full h-full object-contain rounded-xl"
+                  draggable={false}
+                />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
@@ -165,13 +237,35 @@ export default function Gallery() {
                 top: `${buttonPos.top}px`,
                 right: `${buttonPos.right}px`,
               }}
-              className="absolute z-50 p-2 bg-white rounded-full border border-[#a40011] transition-colors cursor-pointer"
+              className="absolute z-50 transition-colors cursor-pointer"
             >
-              <X size={32} strokeWidth={2} className="text-[#a40011]" />
+              <div className="relative flex items-center justify-center w-12 h-12">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="100%"
+                  height="100%"
+                  viewBox="0 0 32 32"
+                  fill="none"
+                  className="absolute inset-0 w-full h-full"
+                >
+                  <path
+                    d="M5.45011 5.45011L16 1.08232L26.5499 5.45011L30.9177 16L26.5499 26.5499L16 30.9177L5.45011 26.5499L1.08232 16L5.45011 5.45011Z"
+                    fill="white"
+                    stroke="#50000B"
+                    strokeWidth="0.5"
+                  />
+                </svg>
+
+                <X
+                  size={20}
+                  strokeWidth={2}
+                  className="relative z-10 text-[#50000b] group-hover:text-[#50000b] transition-colors"
+                />
+              </div>
             </button>
 
             {/* Ảnh Fullscreen */}
-            <div className="relative w-[80%] h-[80%] flex items-center justify-center pointer-events-none animate-in zoom-in-95 duration-300">
+            <div className="relative w-[80%] h-[80%] max-sm:w-full max-sm:h-full flex items-center justify-center pointer-events-none animate-in zoom-in-95 duration-300">
               <img
                 ref={modalImageRef}
                 src={IMAGE_HERO[selectedIndex]}

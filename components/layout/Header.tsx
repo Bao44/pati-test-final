@@ -16,6 +16,7 @@ export default function Header() {
               alt=""
               width={95}
               height={24}
+              className="cursor-pointer"
             />
           </div>
 

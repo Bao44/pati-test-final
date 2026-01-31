@@ -77,6 +77,7 @@ export default function HeaderActions() {
           height="32"
           viewBox="0 0 32 32"
           fill="none"
+          className="cursor-pointer"
         >
           <path
             d="M3 30C3 22.82 8.82 17 16 17C23.18 17 29 22.82 29 30"
@@ -95,7 +96,7 @@ export default function HeaderActions() {
         </svg>
 
         {/* CART ICON + BADGE */}
-        <div className="relative">
+        <div className="relative cursor-pointer">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="32"

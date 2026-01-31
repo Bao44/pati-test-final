@@ -13,9 +13,9 @@ export default function Im8GoldStandard() {
         className="
           rounded-xl
           bg-[#50000b]
-          px-4 py-2
+          px-4 py-2 max-sm:px-2
           text-lg
-          max-lg:text-sm
+          max-lg:text-[13px]
           font-semibold
           text-white
           whitespace-nowrap
