@@ -2,13 +2,13 @@ import { Stat } from "./_components/Stat";
 
 export default function ClinicalProofSection() {
   return (
-    <section className="relative min-h-screen py-12 lg:py-8 px-2 max-sm:px-0 overflow-visible text-white">
+    <section className="relative py-12 lg:py-8 px-2 max-sm:px-0 overflow-visible text-white">
       {/* BACKGROUND IMAGE */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0">
         <img
           src="https://im8health.com/cdn/shop/files/clinical-studies-min.jpg?v=1724176766&width=1728"
           alt="Background Texture"
-          className="w-full h-full lg:h-208.25 md:h-230.25 object-cover"
+          className="w-full h-full object-cover"
         />
       </div>
 

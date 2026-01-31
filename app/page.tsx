@@ -5,6 +5,7 @@ import Header from "@/components/layout/Header";
 import StickyProductBar from "@/components/layout/StickyProductBar";
 import StickyProductBarHeader from "@/components/layout/StickyProductBarHeader";
 import ClinicalProofSection from "@/components/sections/clinical_proof/ClinicalProofSection";
+import InfiniteReviews from "@/components/sections/feedback/InfiniteReviews";
 
 export default function Home() {
   return (
@@ -19,6 +20,10 @@ export default function Home() {
       <ProductHero />
 
       {/* Clinical Proof Section */}
+      <ClinicalProofSection />
+
+      <InfiniteReviews />
+
       <ClinicalProofSection />
     </div>
   );
