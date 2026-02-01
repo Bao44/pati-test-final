@@ -118,3 +118,40 @@ export const REVIEWS = [
     author: "Bernae VeraKruse.",
   },
 ];
+
+export const FOOTER_LINKS = [
+  {
+    title: "SHOP",
+    links: [
+      "Premium Core Nutrition",
+      "The Beckham Stack",
+      "Merchandise",
+      "Shop All",
+    ],
+  },
+  {
+    title: "COMPANY",
+    links: ["About Us", "Science", "Impact"],
+  },
+  {
+    title: "LEARN",
+    links: [
+      "Reviews",
+      "Ingredients",
+      "Quality and Standards",
+      "IM8 Inner Circle",
+      "IM8 vs AG1 Next Gen",
+      "IM8 vs Live It Up Super Greens",
+      "IM8 vs Bloom Greens & Superfoods",
+      "IM8 vs Huel Daily Greens",
+    ],
+  },
+  {
+    title: "SUPPORT",
+    links: ["FAQs", "Track My Order", "Returns / Exchanges", "Contact Us"],
+  },
+  {
+    title: "IM8 COMMUNITY",
+    links: ["Instagram", "Facebook", "TikTok", "YouTube", "Pinterest"],
+  },
+];

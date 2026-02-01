@@ -1,7 +1,7 @@
 "use client";
 
 import { toast } from "react-toastify";
-import SupplyDropdown from "../ui/SupplyDropdown";
+import SupplyDropdown from "../../ui/SupplyDropdown";
 
 export default function StickyProductBar() {
   return (

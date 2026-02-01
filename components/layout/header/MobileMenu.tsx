@@ -2,9 +2,9 @@
 
 import { useEffect } from "react";
 import clsx from "clsx";
-import Im8GoldStandard from "../ui/Im8GoldStandard";
+import Im8GoldStandard from "../../ui/Im8GoldStandard";
 import { IMAGE_BANNERS } from "@/lib/data";
-import CurrencyDropdown from "../ui/CurrencyDropdown";
+import CurrencyDropdown from "../../ui/CurrencyDropdown";
 
 const TEXT_LINKS = [
   "Welcome from David",

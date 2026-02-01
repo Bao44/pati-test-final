@@ -1,12 +1,13 @@
 import ProductHero from "@/components/sections/hero/ProductHero";
 import ChatBot from "../components/chatbot/ChatBot";
-import AnnouncementBar from "@/components/layout/AnnouncementBar";
-import Header from "@/components/layout/Header";
-import StickyProductBar from "@/components/layout/StickyProductBar";
-import StickyProductBarHeader from "@/components/layout/StickyProductBarHeader";
+import AnnouncementBar from "@/components/layout/header/AnnouncementBar";
+import Header from "@/components/layout/header/Header";
+import StickyProductBar from "@/components/layout/header/StickyProductBar";
+import StickyProductBarHeader from "@/components/layout/header/StickyProductBarHeader";
 import ClinicalProofSection from "@/components/sections/clinical_proof/ClinicalProofSection";
 import InfiniteReviews from "@/components/sections/feedback/InfiniteReviews";
 import ModeSwitchSection from "@/components/sections/mode_switch/ModeSwitchSection";
+import Footer from "@/components/layout/footer/Footer";
 
 export default function Home() {
   return (
@@ -27,7 +28,7 @@ export default function Home() {
 
       <ModeSwitchSection />
 
-      <InfiniteReviews />
+      <Footer />
     </div>
   );
 }

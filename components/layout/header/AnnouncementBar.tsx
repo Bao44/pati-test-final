@@ -1,5 +1,5 @@
 import { ChevronDown } from "lucide-react";
-import CurrencyDropdown from "../ui/CurrencyDropdown";
+import CurrencyDropdown from "../../ui/CurrencyDropdown";
 
 export default function AnnouncementBar() {
   return (
