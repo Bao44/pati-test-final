@@ -1,17 +1,18 @@
 import { FOOTER_LINKS } from "@/lib/data";
+import MobileFooterAccordion from "./MobileFooterAccordion";
 
 export default function Footer() {
   return (
     <footer className="bg-[#50000b] text-[#ff9693] pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-15">
       <div className="max-w-375 mx-auto px-4 sm:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         {/* TOP LINKS */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-8 xl:grid-cols-7 gap-6 sm:gap-8 md:gap-10 mb-12 sm:mb-16 md:mb-20">
+        <div className="hidden sm:grid grid-cols-3 lg:grid-cols-8 xl:grid-cols-7 gap-6 sm:gap-8 md:gap-10 mb-12 sm:mb-16 md:mb-20">
           {FOOTER_LINKS.map((col, i) => (
-            <div key={i}>
-              <p className="text-xs sm:text-[17px] font-bold text-[#ff9693] mb-3 sm:mb-4 uppercase">
+            <div key={i} className="max-lg:order-last">
+              <p className="text-[17px] font-bold text-[#ff9693] mb-4 uppercase">
                 {col.title}
               </p>
-              <ul className="space-y-1.5 sm:space-y-3 text-xs sm:text-sm">
+              <ul className="space-y-3 text-sm">
                 {col.links.map((link, j) => (
                   <li
                     key={j}
@@ -25,9 +26,9 @@ export default function Footer() {
           ))}
 
           {/* Newsletter */}
-          <div className="sm:col-span-2 lg:col-span-3 xl:col-span-2">
-            <div className="border-t sm:border-t-0 sm:border-l border-white/30 pt-6 sm:pt-0 sm:pl-6 lg:pl-10">
-              <p className="text-xs sm:text-sm font-bold text-[#ff9693] mb-3 sm:mb-4 uppercase">
+          <div className="sm:col-span-5 lg:col-span-3 xl:col-span-2 max-lg:order-first max-lg:px-50 max-lg:text-center">
+            <div className="max-lg:border-none xl:border-t-0 xl:border-l border-white/30 pt-6 sm:pt-0 sm:pl-6 lg:pl-10">
+              <p className="text-sm max-lg:text-[17px] font-bold text-[#ff9693] mb-3 sm:mb-4 uppercase">
                 Join the community for exclusive wellness insights
               </p>
 
@@ -49,29 +50,34 @@ export default function Footer() {
           </div>
         </div>
 
+        {/* MOBILE */}
+        <MobileFooterAccordion />
+
         {/* BIG LOGO */}
         <div className="relative flex justify-center items-center my-12 sm:my-16 md:my-20 lg:my-24">
           <img
             src="https://im8health.com/cdn/shop/files/IM8_Logo-R_Pink.svg?v=1729137155&width=900"
             alt="IM8 Logo"
-            className="w-full max-w-50 sm:max-w-70 md:max-w-[320px] lg:max-w-350"
+            className="w-full max-w-350"
           />
         </div>
 
         {/* BOTTOM */}
         <div className="text-left text-[10px] sm:text-xs -mt-6 sm:-mt-8 md:-mt-10">
-          <p className="text-[#f2c6c3] pb-6 sm:pb-8 md:pb-10 text-center sm:text-left">
+          <p className="text-[#f2c6c3] max-sm:text-[#ff9693] pb-6 sm:pb-8 md:pb-10 text-center sm:text-left">
             © 2026 IM8® · Privacy Policy · Terms of Service
           </p>
 
-          <div className="border border-[#f2c6c3] p-3 sm:p-3.75 lg:mx-20 xl:mx-auto max-w-full sm:max-w-260 mx-auto">
-            <p className="text-xs sm:text-sm md:text-[18px] xl:text-[16px] text-center font-bold text-[#ff9693] leading-relaxed">
+          <div className="border border-[#f2c6c3] p-3 sm:p-3.75 lg:mx-20 max-lg:mx-30 max-sm:mx-0 xl:mx-auto max-w-full sm:max-w-260 mx-auto">
+            <p className="text-xs sm:text-sm md:text-[16px] text-center font-bold text-[#ff9693] leading-relaxed">
               *These statements have not been evaluated by the Food and Drug
               Administration. This product is not intended to diagnose, treat,
               cure, or prevent any disease.
             </p>
           </div>
-          <p className="text-center mt-3 text-[13px]">**Free Welcome Kit available for new subscribers only.</p>
+          <p className="text-center mt-3 text-[13px] ">
+            **Free Welcome Kit available for new subscribers only.
+          </p>
         </div>
       </div>
     </footer>
