@@ -15,6 +15,7 @@ import ReviewContent from "@/components/sections/review/ReviewContent";
 import ScienceContent from "@/components/sections/science/ScienceContent";
 import ComparisonTable from "@/components/sections/comparison/ComparisonTable";
 import PremiumCoreNutrition from "@/components/sections/premium/PremiumCoreNutrition";
+import FAQSection from "@/components/sections/faq/FAQSection";
 
 export default function Home() {
   return (
@@ -59,6 +60,9 @@ export default function Home() {
 
       {/* Premium Core Nutrition Section */}
       <PremiumCoreNutrition />
+
+      {/* FAQ Section */}
+      <FAQSection />
 
       <Footer />
     </div>
