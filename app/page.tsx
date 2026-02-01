@@ -11,6 +11,7 @@ import Footer from "@/components/layout/footer/Footer";
 import WhatInsideContent from "@/components/sections/what_inside/WhatInsideContent";
 import HowToEnjoyContent from "@/components/sections/how_to_enjoy/HowToEnjoyContent";
 import PricingBundleContent from "@/components/sections/pricing_bundle/PricingBundleContent";
+import ReviewContent from "@/components/sections/review/ReviewContent";
 
 export default function Home() {
   return (
@@ -44,7 +45,8 @@ export default function Home() {
       {/* Pricing Bundle Content */}
       <PricingBundleContent />
 
-      
+      {/* Review */}
+      <ReviewContent />
 
       <Footer />
     </div>

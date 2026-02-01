@@ -155,3 +155,84 @@ export const FOOTER_LINKS = [
     links: ["Instagram", "Facebook", "TikTok", "YouTube", "Pinterest"],
   },
 ];
+
+export const REVIEWS_VIDEOS = [
+  {
+    id: 1,
+    avatarUrl: "https://i.pravatar.cc/150?u=1",
+    reviewerName: "@mrbobbyrich",
+    numberFollowers: "105K",
+    imgReviewUrl:
+      "https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=600&auto=format&fit=crop",
+    reviewText:
+      "As a former athlete and trainer to high performers, including David and Victoria Beckham, it means I need to always be on the top of my game. IM8 helps me to do just that and that's why I'm proud to be part of the team.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/277ed49454544ca4a856e0e3faf4730c/277ed49454544ca4a856e0e3faf4730c.SD-480p-0.9Mbps-39412880.mp4?v=0",
+  },
+  {
+    id: 2,
+    avatarUrl: "https://i.pravatar.cc/150?u=2",
+    reviewerName: "@tavicastro",
+    numberFollowers: "4.8M",
+    imgReviewUrl:
+      "//im8health.com/cdn/shop/files/preview_images/01fc5e8bd9934532b9120f5277539ccc.thumbnail.0000000000.jpg?v=1733712123",
+    reviewText:
+      "As a performance coach, I’m always seeking ways to stay sharp and energized. IM8 is hands down the best all-in-one supplement. It tastes amazing, and my wife and I take it daily—it’s a game-changer.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/01fc5e8bd9934532b9120f5277539ccc/01fc5e8bd9934532b9120f5277539ccc.SD-480p-0.9Mbps-39412912.mp4?v=0",
+  },
+  {
+    id: 3,
+    avatarUrl: "https://i.pravatar.cc/150?u=3",
+    reviewerName: "@thehappyslothshop",
+    numberFollowers: "12.3K",
+    imgReviewUrl:
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=600&auto=format&fit=crop",
+    reviewText:
+      "I've tried countless supplements, but IM8 stands out. The blend of nutrients is perfect for my busy lifestyle, and the taste is fantastic. It's now a staple in my daily routine.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/files/preview_images/60ab4de92d314471a4bc1335539686a3.thumbnail.0000000000.jpg?v=1733712086",
+  },
+  {
+    id: 4,
+    avatarUrl: "https://i.pravatar.cc/150?u=1",
+    reviewerName: "@mrbobbyrich",
+    numberFollowers: "105K",
+    imgReviewUrl:
+      "https://images.unsplash.com/photo-1544367563-12123d8965cd?q=80&w=600&auto=format&fit=crop",
+    reviewText:
+      "As a former athlete and trainer to high performers, including David and Victoria Beckham, it means I need to always be on the top of my game. IM8 helps me to do just that and that's why I'm proud to be part of the team.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/277ed49454544ca4a856e0e3faf4730c/277ed49454544ca4a856e0e3faf4730c.SD-480p-0.9Mbps-39412880.mp4?v=0",
+  },
+  {
+    id: 5,
+    avatarUrl: "https://i.pravatar.cc/150?u=2",
+    reviewerName: "@tavicastro",
+    numberFollowers: "4.8M",
+    imgReviewUrl:
+      "//im8health.com/cdn/shop/files/preview_images/01fc5e8bd9934532b9120f5277539ccc.thumbnail.0000000000.jpg?v=1733712123",
+    reviewText:
+      "As a performance coach, I’m always seeking ways to stay sharp and energized. IM8 is hands down the best all-in-one supplement. It tastes amazing, and my wife and I take it daily—it’s a game-changer.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/01fc5e8bd9934532b9120f5277539ccc/01fc5e8bd9934532b9120f5277539ccc.SD-480p-0.9Mbps-39412912.mp4?v=0",
+  },
+  {
+    id: 6,
+    avatarUrl: "https://i.pravatar.cc/150?u=3",
+    reviewerName: "@thehappyslothshop",
+    numberFollowers: "12.3K",
+    imgReviewUrl:
+      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?q=80&w=600&auto=format&fit=crop",
+    reviewText:
+      "I've tried countless supplements, but IM8 stands out. The blend of nutrients is perfect for my busy lifestyle, and the taste is fantastic. It's now a staple in my daily routine.",
+    rating: 5,
+    video:
+      "//im8health.com/cdn/shop/files/preview_images/60ab4de92d314471a4bc1335539686a3.thumbnail.0000000000.jpg?v=1733712086",
+  },
+];
