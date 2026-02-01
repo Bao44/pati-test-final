@@ -10,6 +10,7 @@ import ModeSwitchSection from "@/components/sections/mode_switch/ModeSwitchSecti
 import Footer from "@/components/layout/footer/Footer";
 import WhatInsideContent from "@/components/sections/what_inside/WhatInsideContent";
 import HowToEnjoyContent from "@/components/sections/how_to_enjoy/HowToEnjoyContent";
+import PricingBundleContent from "@/components/sections/pricing_bundle/PricingBundleContent";
 
 export default function Home() {
   return (
@@ -39,6 +40,11 @@ export default function Home() {
 
       {/* How To Enjoy */}
       <HowToEnjoyContent />
+
+      {/* Pricing Bundle Content */}
+      <PricingBundleContent />
+
+      
 
       <Footer />
     </div>
