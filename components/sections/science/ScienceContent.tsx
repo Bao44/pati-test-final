@@ -1,7 +1,23 @@
+"use client";
+
 import { SCIENTISTS } from "@/lib/data";
 import ScienceCard from "./ScienceCard";
+import { useState } from "react";
+import { AnimatePresence } from "framer-motion";
+import ScienceModal from "./ScienceModal";
+
+export type ScienceItem = {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+  description?: string;
+};
 
 export default function ScienceContent() {
+  const [selectedScientist, setSelectedScientist] =
+    useState<ScienceItem | null>(null);
+
   return (
     <section
       style={{
@@ -28,10 +44,24 @@ export default function ScienceContent() {
         {/* Grid Layout */}
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 xl:gap-6">
           {SCIENTISTS.map((scientist) => (
-            <ScienceCard key={scientist.id} item={scientist} />
+            <ScienceCard
+              key={scientist.id}
+              item={scientist}
+              onOpenModal={() => setSelectedScientist(scientist)}
+            />
           ))}
         </div>
       </div>
+
+      {/* MODAL AREA */}
+      <AnimatePresence>
+        {selectedScientist && (
+          <ScienceModal
+            item={selectedScientist}
+            onClose={() => setSelectedScientist(null)}
+          />
+        )}
+      </AnimatePresence>
     </section>
   );
 }

@@ -3,6 +3,7 @@
 import { IM8_COMPARISON } from "@/lib/data";
 import { Check, X } from "lucide-react";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 const CheckIcon = ({ dark = false }) => (
   <span
@@ -110,7 +111,12 @@ export default function IM8GoldStandard() {
           </div>
 
           {/* CTA */}
-          <button className="max-sm:w-full mt-10 sm:mt-15.5 bg-[#a40011] text-white px-6 sm:px-8.25 py-3 sm:py-3.25 rounded-full font-bold hover:bg-[#5a0010] transition duration-300">
+          <button
+            onClick={() =>
+              toast.success("Handle successfully", { autoClose: 1000 })
+            }
+            className="max-sm:w-full mt-10 sm:mt-15.5 bg-[#a40011] text-white px-6 sm:px-8.25 py-3 sm:py-3.25 rounded-full font-bold hover:bg-[#5a0010] transition duration-300"
+          >
             VIEW SUPPLEMENT FACTS
           </button>
         </div>

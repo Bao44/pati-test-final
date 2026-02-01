@@ -2,6 +2,7 @@
 
 import { FAQS } from "@/lib/data";
 import { useState } from "react";
+import { toast } from "react-toastify";
 
 export default function FAQSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
@@ -48,6 +49,9 @@ export default function FAQSection() {
         </div>
 
         <button
+          onClick={() =>
+            toast.success("Handle successfully", { autoClose: 1000 })
+          }
           className="mt-4 sm:mt-6 inline-flex items-center justify-center
             bg-[#50000b] max-sm:w-full
             px-6 sm:px-14 py-2.5 rounded-full text-lg font-semibold transition"

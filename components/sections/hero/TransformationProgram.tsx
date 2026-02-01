@@ -2,6 +2,7 @@
 
 import { GraduationCap, ChevronRight, Check } from "lucide-react";
 import { IMAGE_TRANSFORMATION } from "@/lib/data";
+import { toast } from "react-toastify";
 
 export default function TransformationProgram() {
   return (
@@ -69,7 +70,12 @@ export default function TransformationProgram() {
             </p>
 
             {/* CTA BUTTON */}
-            <button className="w-full bg-[linear-gradient(90deg,rgb(238,184,122)_0%,rgb(223,206,137)_100%)] hover:opacity-90 transition-opacity text-[#50000b] text-xs font-black uppercase py-4 px-8 max-lg:px-2 rounded-xl flex items-center justify-center shadow-md gap-2">
+            <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
+              className="w-full bg-[linear-gradient(90deg,rgb(238,184,122)_0%,rgb(223,206,137)_100%)] hover:opacity-90 transition-opacity text-[#50000b] text-xs font-black uppercase py-4 px-8 max-lg:px-2 rounded-xl flex items-center justify-center shadow-md gap-2"
+            >
               Learn More About The Program
               <ChevronRight size={16} strokeWidth={3} />
             </button>

@@ -6,7 +6,7 @@ import ProductDetailsSection from "./ProductDetailsSection";
 
 export default function HeroContent() {
   return (
-    <div className="flex flex-col gap-6">
+    <div className="flex flex-col gap-6 max-sm:px-4">
       {/* Reviews Rating */}
       <div className="flex flex-col xl:flex-row xl:items-start gap-2 text-sm font-semibold">
         <div className="flex items-center gap-2">

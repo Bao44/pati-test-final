@@ -1,4 +1,7 @@
+"use client";
+
 import { PRODUCTS } from "@/lib/data";
+import { toast } from "react-toastify";
 
 export default function PremiumCoreNutrition() {
   return (
@@ -94,6 +97,9 @@ export default function PremiumCoreNutrition() {
                   "
                 />
                 <button
+                  onClick={() =>
+                    toast.success("Handle successfully", { autoClose: 1000 })
+                  }
                   className="
                       absolute bottom-2 sm:bottom-4 right-2 sm:right-4
                       bg-white/70 text-[#50000b]
@@ -111,6 +117,9 @@ export default function PremiumCoreNutrition() {
                 </button>
 
                 <button
+                  onClick={() =>
+                    toast.success("Handle successfully", { autoClose: 1000 })
+                  }
                   className="
                       absolute bottom-2 sm:bottom-4 right-2 sm:right-4
                       bg-white/70 text-[#50000b]
@@ -155,7 +164,12 @@ export default function PremiumCoreNutrition() {
 
                 <div className="hidden max-sm:block mt-4">
                   {/* Button Desktop */}
-                  <button className="bg-[#a40011] hover:bg-[#50000b] text-white text-md font-bold py-2.5 w-full rounded-full transition-colors uppercase tracking-wide">
+                  <button
+                    onClick={() =>
+                      toast.success("Handle successfully", { autoClose: 1000 })
+                    }
+                    className="bg-[#a40011] hover:bg-[#50000b] text-white text-md font-bold py-2.5 w-full rounded-full transition-colors uppercase tracking-wide"
+                  >
                     Add to cart
                   </button>
                 </div>

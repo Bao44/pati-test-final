@@ -45,7 +45,7 @@ export default function Home() {
       <ModeSwitchSection />
 
       {/* Savings Comparison */}
-      {/* <SavingsComparison /> */}
+      <SavingsComparison />
 
       {/* IM8 Gold Standard */}
       <IM8GoldStandard />

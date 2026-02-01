@@ -1,5 +1,8 @@
+"use client";
+
 import { FOOTER_LINKS } from "@/lib/data";
 import MobileFooterAccordion from "./MobileFooterAccordion";
+import { toast } from "react-toastify";
 
 export default function Footer() {
   return (
@@ -34,6 +37,9 @@ export default function Footer() {
             />
 
             <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
               type="button"
               className="w-full rounded-full bg-[#9d0015] hover:bg-[#7a0010] transition-colors px-6 py-3.5 text-sm font-bold text-white uppercase tracking-wide shadow-sm"
             >
@@ -82,7 +88,12 @@ export default function Footer() {
                 className="w-full rounded-full px-4 sm:px-5 py-2.5 sm:py-3 text-sm sm:text-base md:text-md font-semibold text-[#50000b] mb-3 sm:mb-4 outline-none bg-white placeholder:text-[#50000b] placeholder:opacity-100"
               />
 
-              <button className="w-full bg-[#b00016] hover:bg-[#9d1b1f] transition text-white text-sm sm:text-base md:text-md font-semibold py-2.5 sm:py-3 px-4 sm:px-5 rounded-full">
+              <button
+                onClick={() =>
+                  toast.success("Handle successfully", { autoClose: 1000 })
+                }
+                className="w-full bg-[#b00016] hover:bg-[#9d1b1f] transition text-white text-sm sm:text-base md:text-md font-semibold py-2.5 sm:py-3 px-4 sm:px-5 rounded-full"
+              >
                 JOIN NOW
               </button>
 

@@ -13,6 +13,7 @@ import {
   CheckCircle2,
 } from "lucide-react";
 import OctagonRadio from "@/components/ui/OctagonRadio";
+import { toast } from "react-toastify";
 
 type PlanType = "90day" | "30day";
 
@@ -215,6 +216,9 @@ export default function SubscriptionOptions() {
 
       {/* DYNAMIC ACTION BUTTON */}
       <button
+        onClick={() =>
+          toast.success("Handle successfully", { autoClose: 1000 })
+        }
         className="
           w-full
           rounded-full

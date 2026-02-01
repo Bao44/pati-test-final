@@ -1,3 +1,7 @@
+"use client";
+
+import { toast } from "react-toastify";
+
 export default function PricingBundleContent() {
   return (
     <section
@@ -97,7 +101,12 @@ export default function PricingBundleContent() {
           </div>
 
           {/* Nút CTA */}
-          <button className="w-full bg-[#a3001b] hover:bg-[#8a0016] text-white font-bold py-3 px-3.25 max-sm:px-0 rounded-full uppercase tracking-wider transition-colors shadow-lg text-sm sm:text-base whitespace-nowrap">
+          <button
+            onClick={() =>
+              toast.success("Handle successfully", { autoClose: 1000 })
+            }
+            className="w-full bg-[#a3001b] hover:bg-[#8a0016] text-white font-bold py-3 px-3.25 max-sm:px-0 rounded-full uppercase tracking-wider transition-colors shadow-lg text-sm sm:text-base whitespace-nowrap"
+          >
             Get your free IM8 welcome kit now**
           </button>
 

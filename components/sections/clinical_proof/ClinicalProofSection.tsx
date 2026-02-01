@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { Stat } from "./_components/Stat";
+import { toast } from "react-toastify";
 
 export default function ClinicalProofSection() {
   const [stats, setStats] = useState<number[]>([0, 0, 0, 0]);
@@ -64,6 +65,9 @@ export default function ClinicalProofSection() {
 
           <div className="sm:hidden mt-8 flex flex-col gap-4 w-full sm:max-w-sm mx-auto">
             <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
               className="
                 rounded-full
                 bg-[#50000b]
@@ -78,6 +82,9 @@ export default function ClinicalProofSection() {
             </button>
 
             <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
               className="
                 rounded-full
                 bg-[#ff9693]
@@ -160,6 +167,9 @@ export default function ClinicalProofSection() {
           {/* CTA Desktop */}
           <div className="hidden sm:flex mt-8 flex-col gap-4 w-full sm:max-w-sm mx-auto">
             <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
               className="
                 rounded-full
                 bg-[#50000b]
@@ -174,6 +184,9 @@ export default function ClinicalProofSection() {
             </button>
 
             <button
+              onClick={() =>
+                toast.success("Handle successfully", { autoClose: 1000 })
+              }
               className="
                 rounded-full
                 bg-[#ff9693]

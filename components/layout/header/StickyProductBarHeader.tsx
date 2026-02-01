@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import clsx from "clsx";
+import { toast } from "react-toastify";
 
 export default function StickyProductBarHeader() {
   const [isVisible, setIsVisible] = useState(false);
@@ -64,13 +65,21 @@ export default function StickyProductBarHeader() {
         {/* CTA Button */}
         <div className="xl:block hidden">
           {/* Button Desktop */}
-          <button className="bg-[#a40011] hover:bg-[#50000b] text-white text-md font-bold py-2.5 px-27 rounded-full transition-colors uppercase tracking-wide">
+          <button
+            onClick={() =>
+              toast.success("Handle successfully", { autoClose: 1000 })
+            }
+            className="bg-[#a40011] hover:bg-[#50000b] text-white text-md font-bold py-2.5 px-27 rounded-full transition-colors uppercase tracking-wide"
+          >
             Get Started
           </button>
         </div>
 
         {/* Button Mobile/Tablet */}
         <button
+          onClick={() =>
+            toast.success("Handle successfully", { autoClose: 1000 })
+          }
           className={clsx(
             "xl:hidden", // Ẩn trên desktop
             "bg-[#a40011] hover:bg-[#50000b] text-white",
