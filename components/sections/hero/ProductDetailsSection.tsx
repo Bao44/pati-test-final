@@ -91,7 +91,7 @@ export default function ProductDetailsSection() {
                 className={`
                 overflow-hidden
                 transition-all
-                duration-300
+                duration-700
                 ${isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"}
               `}
               >

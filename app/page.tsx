@@ -6,6 +6,7 @@ import StickyProductBar from "@/components/layout/StickyProductBar";
 import StickyProductBarHeader from "@/components/layout/StickyProductBarHeader";
 import ClinicalProofSection from "@/components/sections/clinical_proof/ClinicalProofSection";
 import InfiniteReviews from "@/components/sections/feedback/InfiniteReviews";
+import ModeSwitchSection from "@/components/sections/mode_switch/ModeSwitchSection";
 
 export default function Home() {
   return (
@@ -24,7 +25,9 @@ export default function Home() {
 
       <InfiniteReviews />
 
-      <ClinicalProofSection />
+      <ModeSwitchSection />
+
+      <InfiniteReviews />
     </div>
   );
 }

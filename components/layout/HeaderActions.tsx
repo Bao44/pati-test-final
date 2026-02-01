@@ -21,7 +21,7 @@ export default function HeaderActions() {
         >
           {/* TRIGGER */}
           <button
-            onClick={() => setOpen((v) => !v)}
+            onClick={() => setOpen((v) => (v ? false : true))}
             className="group flex cursor-pointer items-center gap-1 font-semibold max-xl:font-black"
           >
             Discover

@@ -161,7 +161,7 @@ button {
 
 .no-scrollbar {
   -ms-overflow-style: none;
-  scrollbar-width: none;   
+  scrollbar-width: none;
 }
 
 @keyframes scroll {
@@ -175,6 +175,56 @@ button {
 
 .animate-scroll {
   animation: scroll 40s linear infinite;
+}
+
+.bg-organ {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 60px,
+      rgba(164, 0, 17, 0.08) 60px,
+      rgba(164, 0, 17, 0.08) 61px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 60px,
+      rgba(164, 0, 17, 0.06) 60px,
+      rgba(164, 0, 17, 0.06) 61px
+    ),
+    linear-gradient(
+      rgb(245, 234, 234) 0%,
+      rgb(253, 248, 248) 15%,
+      rgb(249, 241, 241) 40%,
+      rgb(245, 234, 234) 70%,
+      rgba(164, 0, 17, 0.08) 100%
+    );
+}
+
+.bg-cellular {
+  background:
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 60px,
+      rgba(180, 140, 30, 0.08) 60px,
+      rgba(180, 140, 30, 0.08) 61px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(0, 0, 0, 0) 0px,
+      rgba(0, 0, 0, 0) 60px,
+      rgba(180, 140, 30, 0.06) 60px,
+      rgba(180, 140, 30, 0.06) 61px
+    ),
+    linear-gradient(
+      rgb(250, 247, 238) 0%,
+      rgb(255, 253, 245) 15%,
+      rgb(248, 244, 232) 40%,
+      rgb(250, 247, 238) 70%,
+      rgba(231, 141, 45, 0.08) 100%
+    );
 }
 
 /* Tablet */

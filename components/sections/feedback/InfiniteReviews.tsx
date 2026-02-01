@@ -4,7 +4,7 @@ import { ReviewCard } from "./_components/ReviewCard";
 
 export default function InfiniteReviews() {
   return (
-    <section className="bg-[#f9f2ed] pt-20 pb-15 overflow-hidden">
+    <section className="bg-[#f9f2ed] pt-20 pb-15 max-sm:pb-10 overflow-hidden">
       {/* TITLE */}
       <div className="text-center mb-12 px-4">
         <p className="text-[40px] max-sm:text-[30px] font-medium text-[#50000b]">
@@ -35,7 +35,7 @@ export default function InfiniteReviews() {
       </div>
 
       {/* FOOTER */}
-      <p className="mt-12 text-center text-lg text-[#50000b]">
+      <p className="mt-12 text-center text-lg max-sm:text-sm text-[#50000b]">
         <b>11,825 Reviews</b> | Average Rating: 4.8/5
       </p>
     </section>
