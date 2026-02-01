@@ -8,25 +8,32 @@ import ClinicalProofSection from "@/components/sections/clinical_proof/ClinicalP
 import InfiniteReviews from "@/components/sections/feedback/InfiniteReviews";
 import ModeSwitchSection from "@/components/sections/mode_switch/ModeSwitchSection";
 import Footer from "@/components/layout/footer/Footer";
+import WhatInsideContent from "@/components/sections/what_inside/WhatInsideContent";
 
 export default function Home() {
   return (
     <div>
       <ChatBot />
+
       {/* Header */}
       <AnnouncementBar />
       <Header />
       <StickyProductBar />
       <StickyProductBarHeader />
+
       {/* Product Hero Section */}
       <ProductHero />
 
       {/* Clinical Proof Section */}
       <ClinicalProofSection />
 
+      {/* Feedback */}
       <InfiniteReviews />
 
+      {/* Switch Mode Section */}
       <ModeSwitchSection />
+
+      <WhatInsideContent />
 
       <Footer />
     </div>
