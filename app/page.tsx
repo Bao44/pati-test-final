@@ -16,6 +16,10 @@ import ScienceContent from "@/components/sections/science/ScienceContent";
 import ComparisonTable from "@/components/sections/comparison/ComparisonTable";
 import PremiumCoreNutrition from "@/components/sections/premium/PremiumCoreNutrition";
 import FAQSection from "@/components/sections/faq/FAQSection";
+import SavingsComparison from "@/components/sections/savings_comparison/SavingsComparison";
+import IM8GoldStandard from "@/components/sections/IM8_gold_standard/IM8GoldStandard";
+import TrustedExperts from "@/components/sections/expert_trust/ExpertTrustSection";
+import PillarsSwitch from "@/components/sections/pillars_switch/PillarsSwitch";
 
 export default function Home() {
   return (
@@ -39,6 +43,18 @@ export default function Home() {
 
       {/* Switch Mode Section */}
       <ModeSwitchSection />
+
+      {/* Savings Comparison */}
+      {/* <SavingsComparison /> */}
+
+      {/* IM8 Gold Standard */}
+      <IM8GoldStandard />
+
+      {/* Pillars Switch Section */}
+      <PillarsSwitch />
+
+      {/* Expert Trust Section */}
+      <TrustedExperts />
 
       {/* What Inside */}
       <WhatInsideContent />

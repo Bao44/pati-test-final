@@ -121,6 +121,188 @@ export const REVIEWS = [
   },
 ];
 
+export const MONTHLY_BREAKDOWN = [
+  { label: "Multivitamins, Minerals & Antioxidants", price: "$35" },
+  { label: "Superfoods, Greens & Fruits", price: "$50" },
+  { label: "Immunity", price: "$20" },
+  { label: "Electrolytes", price: "$40" },
+  { label: "Adaptogens & Super Mushrooms", price: "$30" },
+  { label: "Prebiotics, Probiotics & Postbiotics", price: "$40" },
+  { label: "CoQ10 (Heart Vitality)", price: "$30" },
+  { label: "MSM (Joint & Muscle Vitality)", price: "$25" },
+  { label: "Essential Amino Acids", price: "$20" },
+];
+
+export const IM8_COMPARISON = [
+  {
+    left: "Superfoods, Greens, Fruits, Herbs",
+    right: "Superfoods, Greens, Fruits, Herbs",
+    rightOk: true,
+  },
+  {
+    left: "Clinical Dosed B Vitamins",
+    right: "Clinical Dosed B Vitamins",
+    rightOk: true,
+  },
+  {
+    left: "30mcg Clinical Dosed Vitamin D3",
+    right: "No Vitamin D3",
+    rightOk: false,
+  },
+  {
+    left: "40mcg Clinical Dosed Vitamin K2",
+    right: "Vitamin K2 dosage not disclosed",
+    rightOk: false,
+  },
+  {
+    left: "100mg Clinical Dosed CoQ10",
+    right: "CoQ10 dosage not disclosed",
+    rightOk: false,
+  },
+  {
+    left: "1000mg Clinical Dosed MSM",
+    right: "No MSM",
+    rightOk: false,
+  },
+  {
+    left: "3g Prebiotic fiber (50% more)",
+    right: "2g Prebiotic fiber",
+    rightOk: false,
+  },
+  {
+    left: "900mg Clinical Dosed Vitamin C (114% more)",
+    right: "420mg Vitamin C",
+    rightOk: false,
+  },
+  {
+    left: "4.2mg Clinical Dosed Riboflavin (110% more)",
+    right: "2mg Riboflavin",
+    rightOk: false,
+  },
+  {
+    left: "65mg Magnesium (150% more)",
+    right: "26mg Magnesium",
+    rightOk: false,
+  },
+  {
+    left: "30mcg Clinical Dosed Vitamin D3",
+    right: "No Vitamin D3",
+    rightOk: false,
+  },
+  {
+    left: "40mcg Clinical Dosed Vitamin K2",
+    right: "Vitamin K2 dosage not disclosed",
+    rightOk: false,
+  },
+  {
+    left: "100mg Clinical Dosed CoQ10",
+    right: "CoQ10 dosage not disclosed",
+    rightOk: false,
+  },
+  {
+    left: "1000mg Clinical Dosed MSM",
+    right: "No MSM",
+    rightOk: false,
+  },
+  {
+    left: "3g Prebiotic fiber (50% more)",
+    right: "2g Prebiotic fiber",
+    rightOk: false,
+  },
+  {
+    left: "900mg Clinical Dosed Vitamin C (114% more)",
+    right: "420mg Vitamin C",
+    rightOk: false,
+  },
+];
+
+export const EXPERT_REVIEWS = [
+  {
+    id: 1,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/18ce63f7f6154e888f2a48c2a478e480/18ce63f7f6154e888f2a48c2a478e480.HD-1080p-7.2Mbps-38131720.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/18ce63f7f6154e888f2a48c2a478e480.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=1",
+    nickname: "@drjamesdinc",
+    name: "Dr. James DiNicolantonio",
+    followers: "3.2M",
+    description: `Cardiovascular Scientist & Best-Selling Author on 12+ Books on Health`,
+  },
+  {
+    id: 2,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/ec95f3f8f55f4c1eb679982d43bf091d/ec95f3f8f55f4c1eb679982d43bf091d.HD-1080p-4.8Mbps-38234483.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/ec95f3f8f55f4c1eb679982d43bf091d.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=2",
+    nickname: "@dramys",
+    name: "Dr. Amy Shah",
+    followers: "1.4M",
+    description: `Double-Board Certified Physician & Host of Podcast “Save Yourself`,
+  },
+  {
+    id: 3,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/936fe1ac73a046a98e1ff7e701676228/936fe1ac73a046a98e1ff7e701676228.HD-1080p-7.2Mbps-38131732.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/936fe1ac73a046a98e1ff7e701676228.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=3",
+    nickname: "@monasharma",
+    name: "Mona Sharma",
+    followers: "183K",
+    description: `Celebrity Nutritionist`,
+  },
+  {
+    id: 4,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/17fb74b0dd5d46e8ac4d1668b46b2134/17fb74b0dd5d46e8ac4d1668b46b2134.HD-1080p-7.2Mbps-38131729.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/17fb74b0dd5d46e8ac4d1668b46b2134.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=4",
+    nickname: "@elissagoodman",
+    name: "Elissa Goodman",
+    followers: "189K",
+    description: `Holistic Nutritionist`,
+  },
+  {
+    id: 5,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/db58a8d3630b47a597fb148aba8a1790/db58a8d3630b47a597fb148aba8a1790.HD-1080p-3.3Mbps-38232043.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/db58a8d3630b47a597fb148aba8a1790.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=5",
+    nickname: "@drberthabaum",
+    name: "Dr. Bertha Baum",
+    followers: "229K",
+    description: `Board-Certified Dermatologist`,
+  },
+  {
+    id: 6,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/9d07478703af48a2903deb8e3fbd5076/9d07478703af48a2903deb8e3fbd5076.HD-1080p-4.8Mbps-38192239.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/9d07478703af48a2903deb8e3fbd5076.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=6",
+    nickname: "@drjennandjuice",
+    name: "Dr. Jennifer Tsai",
+    followers: "284K",
+    description: `Board-Certified Optometrist & Nutrition Specialist`,
+  },
+  {
+    id: 7,
+    video:
+      "//im8health.com/cdn/shop/videos/c/vp/1cfa80d2973d44619564e370d8fb9a5a/1cfa80d2973d44619564e370d8fb9a5a.HD-1080p-7.2Mbps-38201373.mp4?v=0",
+    poster:
+      "//im8health.com/cdn/shop/files/preview_images/1cfa80d2973d44619564e370d8fb9a5a.thumbnail.0000000000.jpg?v=1731647937",
+    avatar: "https://i.pravatar.cc/150?u=8",
+    nickname: "@holisticmd",
+    name: "Dr. Sarah Lin",
+    followers: "520K",
+    description: `Doctor of Pharmacy & Wellness Coach`,
+  },
+];
+
 export const REVIEWS_VIDEOS = [
   {
     id: 1,
