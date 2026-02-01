@@ -296,3 +296,103 @@ export const SCIENTISTS = [
     image: "//im8health.com/cdn/shop/files/sab_Hill_headshot.jpg?v=1750043459",
   },
 ];
+
+export const COMPARISON_ROWS = [
+  {
+    type: "sectionHeader",
+    label: "IMMEDIATE ESSENTIALS BENEFIT",
+    leftLabel: "Essentials",
+    rightLabel: "Beckham Stack",
+  },
+
+  {
+    type: "item",
+    name: "92 Nutrient-Rich Ingredients",
+    basic: true,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "All-Day Energy & Focus",
+    basic: true,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Better Sleep Quality",
+    basic: true,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Digestive Health & Gut Support",
+    basic: true,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Immune System Protection",
+    basic: true,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Mental Clarity & Performance",
+    basic: true,
+    stack: true,
+  },
+
+  {
+    type: "category",
+    label: "ADVANCED LONGEVITY BENEFIT",
+  },
+  {
+    type: "item",
+    name: "10 Longevity Compounds",
+    basic: false,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Autophagy Cellular Cleanup Activation",
+    basic: false,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "NMN NAD+ Cellular Restoration",
+    basic: false,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Targets All 12 Hallmarks of Aging",
+    basic: false,
+    stack: true,
+  },
+  {
+    type: "item",
+    name: "Triple Senolytic Zombie Cell Removal",
+    basic: false,
+    stack: true,
+  },
+
+  {
+    type: "summary",
+    name: "Monthly Subscription",
+    basic: "$99",
+    stack: "$196",
+  },
+  {
+    type: "summary",
+    name: "Cost per Daily Serving",
+    basic: "$3",
+    stack: "$7",
+  },
+  {
+    type: "summary",
+    name: "Savings vs. Buying Separately",
+    basic: "–",
+    stack: "$12/month",
+  },
+];

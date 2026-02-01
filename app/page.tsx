@@ -13,6 +13,7 @@ import HowToEnjoyContent from "@/components/sections/how_to_enjoy/HowToEnjoyCont
 import PricingBundleContent from "@/components/sections/pricing_bundle/PricingBundleContent";
 import ReviewContent from "@/components/sections/review/ReviewContent";
 import ScienceContent from "@/components/sections/science/ScienceContent";
+import ComparisonTable from "@/components/sections/comparison/ComparisonTable";
 
 export default function Home() {
   return (
@@ -51,6 +52,9 @@ export default function Home() {
 
       {/* Science Content */}
       <ScienceContent />
+
+      {/* Comparison Table */}
+      <ComparisonTable />
 
       <Footer />
     </div>
