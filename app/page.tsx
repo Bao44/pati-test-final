@@ -9,6 +9,7 @@ import InfiniteReviews from "@/components/sections/feedback/InfiniteReviews";
 import ModeSwitchSection from "@/components/sections/mode_switch/ModeSwitchSection";
 import Footer from "@/components/layout/footer/Footer";
 import WhatInsideContent from "@/components/sections/what_inside/WhatInsideContent";
+import HowToEnjoyContent from "@/components/sections/how_to_enjoy/HowToEnjoyContent";
 
 export default function Home() {
   return (
@@ -33,7 +34,11 @@ export default function Home() {
       {/* Switch Mode Section */}
       <ModeSwitchSection />
 
+      {/* What Inside */}
       <WhatInsideContent />
+
+      {/* How To Enjoy */}
+      <HowToEnjoyContent />
 
       <Footer />
     </div>
