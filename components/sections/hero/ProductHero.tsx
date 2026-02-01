@@ -16,9 +16,9 @@ export default function ProductHero() {
       </div>
 
       {/* CONTENT CONTAINER */}
-      <div className="relative z-10 mx-auto max-w-350 px-1 max-sm:px-0">
+      <div className="relative z-10 mx-auto max-w-350 max-sm:px-0">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-          <div className="md:col-span-6  xl:col-span-7 relative">
+          <div className="md:col-span-6 xl:col-span-7 relative">
             <div className="sticky top-28 transition-all duration-300">
               <Gallery />
             </div>
