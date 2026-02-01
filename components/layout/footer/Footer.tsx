@@ -3,7 +3,51 @@ import MobileFooterAccordion from "./MobileFooterAccordion";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#50000b] text-[#ff9693] pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-15">
+    <footer className="bg-[#50000b] text-[#ff9693] sm:pt-16 md:pt-20 lg:pt-24 pb-15">
+      <div className="relative w-full h-127.5 overflow-hidden sm:hidden flex flex-col justify-center items-center text-center px-6">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute top-0 left-0 w-full h-full object-cover"
+        >
+          <source
+            src="https://im8health.com/cdn/shop/videos/c/vp/fbf49de132784b63b1209cf9f32ce77d/fbf49de132784b63b1209cf9f32ce77d.HD-720p-2.1Mbps-33478040.mp4?v=0"
+            type="video/mp4"
+          />
+        </video>
+
+        <div className="absolute inset-0 bg-white/50 backdrop-blur-[2px] z-0" />
+
+        {/* Content Overlay */}
+        <div className="relative z-10 w-full max-w-sm mx-auto">
+          <p className="text-[38px] leading-[1.1] font-medium text-[#50000b] mb-8 font-serif">
+            Join the community for exclusive wellness insights
+          </p>
+
+          <form className="space-y-4">
+            <input
+              type="email"
+              placeholder="EMAIL ADDRESS"
+              className="w-full rounded-full border border-[#50000b] px-6 py-3.5 text-sm font-bold text-[#50000b] placeholder:text-[#50000b] bg-white outline-none uppercase tracking-wide shadow-sm"
+            />
+
+            <button
+              type="button"
+              className="w-full rounded-full bg-[#9d0015] hover:bg-[#7a0010] transition-colors px-6 py-3.5 text-sm font-bold text-white uppercase tracking-wide shadow-sm"
+            >
+              JOIN NOW
+            </button>
+          </form>
+
+          <p className="text-[12px] text-[#50000b] font-medium mt-4 leading-snug">
+            *By joining, you'll receive our wellness insights and
+            <br /> can unsubscribe anytime.
+          </p>
+        </div>
+      </div>
+
       <div className="max-w-375 mx-auto px-4 sm:px-6 pb-12 sm:pb-16 md:pb-20 lg:pb-24">
         {/* TOP LINKS */}
         <div className="hidden sm:grid grid-cols-3 lg:grid-cols-8 xl:grid-cols-7 gap-6 sm:gap-8 md:gap-10 mb-12 sm:mb-16 md:mb-20">
