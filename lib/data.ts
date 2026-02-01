@@ -1,3 +1,5 @@
+import { b } from "framer-motion/client";
+
 export const IMAGE_BANNERS = [
   "https://im8health.com/cdn/shop/files/DUE-thumb.png?v=1762223928&width=600",
   "https://im8health.com/cdn/shop/files/DUL-thumb.png?v=1762223929&width=600",
@@ -394,5 +396,48 @@ export const COMPARISON_ROWS = [
     name: "Savings vs. Buying Separately",
     basic: "–",
     stack: "$12/month",
+  },
+];
+
+export const PRODUCTS = [
+  {
+    id: "essentials",
+    badge: "BEST SELLER",
+    tag: "FEEL AMAZING TODAY",
+    title: "Daily Ultimate Essentials:",
+    subtitle: "All-in-One Supplement",
+    description:
+      "Core nutrition with 92 nutrient-rich ingredients in one delicious drink.",
+    price: "From $89",
+    image:
+      "https://im8health.com/cdn/shop/files/Frame_1171275435.png?v=1762225645&width=940",
+    hoverImage:
+      "https://im8health.com/cdn/shop/files/DB.jpg?v=1731598505&width=940",
+  },
+  {
+    id: "longevity",
+    tag: "STAY YOUNG TOMORROW",
+    title: "Daily Ultimate Longevity:",
+    subtitle: "Healthy Aging",
+    description:
+      "The World’s first supplement scientifically formulated to support all 12 hallmarks of aging.",
+    price: "From $119",
+    image:
+      "https://im8health.com/cdn/shop/files/Frame_1171275436.png?v=1762225646&width=940",
+    hoverImage:
+      "https://im8health.com/cdn/shop/files/pdp_carousel_ESS01_grid-hover_1.jpg?v=1759218112&width=940",
+  },
+  {
+    id: "beckham",
+    tag: "The ultimate daily ritual",
+    badge: "BEST VALUE",
+    title: "The Beckham Stack:",
+    subtitle: "Essentials + Longevity Set",
+    description: "Daily Ultimate Essentials and Daily Ultimate Longevity.",
+    price: "From $196",
+    image:
+      "https://im8health.com/cdn/shop/files/20250922_DB_IM8_S10_102_1X1_2_1.jpg?v=1762225129&width=940",
+    hoverImage:
+      "https://im8health.com/cdn/shop/files/pdp_carousel_BSK01_grid-hover.jpg?v=1759900880&width=940",
   },
 ];

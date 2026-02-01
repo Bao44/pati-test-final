@@ -14,6 +14,7 @@ import PricingBundleContent from "@/components/sections/pricing_bundle/PricingBu
 import ReviewContent from "@/components/sections/review/ReviewContent";
 import ScienceContent from "@/components/sections/science/ScienceContent";
 import ComparisonTable from "@/components/sections/comparison/ComparisonTable";
+import PremiumCoreNutrition from "@/components/sections/premium/PremiumCoreNutrition";
 
 export default function Home() {
   return (
@@ -55,6 +56,9 @@ export default function Home() {
 
       {/* Comparison Table */}
       <ComparisonTable />
+
+      {/* Premium Core Nutrition Section */}
+      <PremiumCoreNutrition />
 
       <Footer />
     </div>
