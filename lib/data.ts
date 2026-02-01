@@ -236,3 +236,63 @@ export const REVIEWS_VIDEOS = [
       "//im8health.com/cdn/shop/files/preview_images/60ab4de92d314471a4bc1335539686a3.thumbnail.0000000000.jpg?v=1733712086",
   },
 ];
+
+export const SCIENTISTS = [
+  {
+    id: 1,
+    name: "Prof. Suzanne Devkota",
+    title: "Director of Cedars-Sinai Human Microbiome Research Institute",
+    image: "//im8health.com/cdn/shop/files/Frame_1000004731.png?v=1727767462",
+  },
+  {
+    id: 2,
+    name: "Dr. James L. Green",
+    title: "Former Chief Scientist of NASA",
+    image: "//im8health.com/cdn/shop/files/Frame_1000004729.png?v=1727767462",
+  },
+  {
+    id: 3,
+    name: "Dr. Dawn Mussallem",
+    title: "CMO of Fountain Life & Integrative Oncologist at Mayo Clinic",
+    image: "//im8health.com/cdn/shop/files/sab_Dawn_grid.jpg?v=1747304298",
+  },
+  {
+    id: 4,
+    name: "Dr. James DiNicolantonio",
+    title: "Cardiovascular Research Scientist and Doctor of Pharmacy",
+    image: "//im8health.com/cdn/shop/files/Dr._James_D.png?v=1730708665",
+  },
+  {
+    id: 5,
+    name: "Dr. Jeremy London",
+    title: "Board Certified Cardiovascular Surgeon",
+    image:
+      "//im8health.com/cdn/shop/files/sab_London_headshot.jpg?v=1741755281",
+  },
+  {
+    id: 6,
+    name: "Dr. Amy Shah",
+    title: "Double Board Certified Physician & Host of Podcast 'Save Yourself'",
+    image: "//im8health.com/cdn/shop/files/sab_Shah_headshot.jpg?v=1741754337",
+  },
+  {
+    id: 7,
+    name: "Dr. David Sinclair",
+    title: "Professor of Genetics at Harvard Medical School",
+    image:
+      "//im8health.com/cdn/shop/files/sab_Suppiah_headshot.jpg?v=1750043459",
+  },
+  {
+    id: 8,
+    name: "Dr. Rhonda Patrick",
+    title: "Ph.D in Biomedical Science & Nutrition Expert",
+    image:
+      "//im8health.com/cdn/shop/files/sab_DarshanShah_headshot.jpg?v=1750043459",
+  },
+  {
+    id: 9,
+    name: "Dr. Andrew Huberman",
+    title: "Professor of Neurobiology at Stanford School of Medicine",
+    image: "//im8health.com/cdn/shop/files/sab_Hill_headshot.jpg?v=1750043459",
+  },
+];

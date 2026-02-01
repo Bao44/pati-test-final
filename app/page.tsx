@@ -12,6 +12,7 @@ import WhatInsideContent from "@/components/sections/what_inside/WhatInsideConte
 import HowToEnjoyContent from "@/components/sections/how_to_enjoy/HowToEnjoyContent";
 import PricingBundleContent from "@/components/sections/pricing_bundle/PricingBundleContent";
 import ReviewContent from "@/components/sections/review/ReviewContent";
+import ScienceContent from "@/components/sections/science/ScienceContent";
 
 export default function Home() {
   return (
@@ -45,8 +46,11 @@ export default function Home() {
       {/* Pricing Bundle Content */}
       <PricingBundleContent />
 
-      {/* Review */}
+      {/* Review Video */}
       <ReviewContent />
+
+      {/* Science Content */}
+      <ScienceContent />
 
       <Footer />
     </div>
